@@ -1,0 +1,21 @@
+CREATE DATABASE employees_db;
+
+USE employees_db;
+
+CREATE TABLE employees(
+    id INT(11) NOT NULL,
+    name VARCHAR(30) NOT NULL,
+    position VARCHAR(60) NOT NULL,
+    office VARCHAR(60) NOT NULL,
+    salary INT(20) NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE employees
+    ADD PRIMARY KEY (id);
+
+ALTER TABLE employees
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT;
+
+DESCRIBE employees;
